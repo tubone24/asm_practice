@@ -12,7 +12,7 @@ _start:
 	mov rbx, 15
 	div rbx                             ; div rbx: rax / rbx = rax % rdx
 	cmp rdx, 0                          ; If rdx equal 0,
-	jz print_fizzbuzz                    ; jz: jump if zero to print_fizzbuzz
+    jz print_fizzbuzz                    ; jz: jump if zero to print_fizzbuzz
 
     ; divisible by 3
 	xor rdx, rdx                        ; reset dx
@@ -31,19 +31,19 @@ _start:
 	jz print_buzz
 
     ; print number
-	mov rax, rcx                        ; register the registers required to execute print_num_ascii.
+    mov rax, rcx                        ; register the registers required to execute print_num_ascii.
 	call print_num_ascii
 	jmp inc_cnt
 
-	print_fizzbuzz:                      ; print FizzBuzz
-	mov rax, 1                          ; syscall write is `1` in Linux x86_64  refs: https://www.mztn.org/lxasm64/x86_x64_table.html
-	mov rdi, 1                          ; 1: stdout
-	mov rsi, fizzbuzz                    ; ptr to buffer `FizzBuzz`
-	mov rdx, fizzbuzzlen                 ; buffer size
-	syscall                             ; syscall
-	jmp inc_cnt                         ; increment loop cnt
+    print_fizzbuzz:                      ; print FizzBuzz
+    mov rax, 1                          ; syscall write is `1` in Linux x86_64  refs: https://www.mztn.org/lxasm64/x86_x64_table.html
+    mov rdi, 1                          ; 1: stdout
+    mov rsi, fizzbuzz                    ; ptr to buffer `FizzBuzz`
+    mov rdx, fizzbuzzlen                 ; buffer size
+    syscall                             ; syscall
+    jmp inc_cnt                         ; increment loop cnt
 
-	print_fizz:                          ; print Fizz
+    print_fizz:                          ; print Fizz
 	mov rax, 1 
 	mov rdi, 1
 	mov rsi, fizz
