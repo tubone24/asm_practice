@@ -11,7 +11,7 @@ docker compose up -d
 docker exec -it asm_practice bash
 ```
 
-Next, we will use the make command to turn the asm file into an executable file using NASM and the GNU linker.
+Next, we will use the make command to turn the asm file into an executable file using [NASM](https://www.nasm.us/) and the [GNU linker](https://ftp.gnu.org/old-gnu/Manuals/ld-2.9.1/html_mono/ld.html).
 
 If you use the run command, it will run in a series of processes until execution.
 
@@ -21,3 +21,10 @@ make build TARGE=fizzbuzz
 
 make run TARGET=fizzbuzz
 ```
+
+## What I practiced.
+
+- [hello.asm](https://github.com/tubone24/asm_practice/blob/main/src/hello.asm)
+  - syswrite practice
+- [fizzbuzz.asm](https://github.com/tubone24/asm_practice/blob/main/src/fizzbuzz.asm)
+  - [FizzBuzz](https://en.wikipedia.org/wiki/Fizz_buzz) practice
