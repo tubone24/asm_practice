@@ -12,7 +12,7 @@ _start:
 	mov rbx, 15
 	div rbx                             ; div rbx: rax / rbx = rax % rdx
 	cmp rdx, 0                          ; If rdx equal 0,
-    jz print_fizzbuzz                    ; jz: jump if zero to print_fizzbuzz
+	jz print_fizzbuzz                    ; jz: jump if zero to print_fizzbuzz
 
     ; divisible by 3
 	xor rdx, rdx                        ; reset dx
