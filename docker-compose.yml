@@ -1,0 +1,8 @@
+version: '3.5'
+services:
+  asm:
+    build: .
+    tty: true
+    container_name: asm_practice
+    volumes:
+      - ./:/app/
